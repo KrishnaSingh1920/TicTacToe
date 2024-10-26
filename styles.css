@@ -1,12 +1,18 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(255, 79, 114);
+    padding-top: 75px;
+    background: linear-gradient(135deg, #ff6161, #ff9999);
     color: white;
     text-align: center;
+    user-select: none;
+}
+
+h1 {
+    font-size: 48px;
 }
 
 .center {
@@ -24,28 +30,40 @@ body {
 .box {
     display: grid;
     place-items: center;
-    background-color: rgba(255, 255, 255, 0.21);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
     padding: 10px;
-    border-radius: 7.5px;
+    border-radius: 5px;
     font-size: 20vw;
     font-family: sans-serif;
-    transition: background-color 0.5s ease-in-out;
+    transition: transform 0.3s ease, background 0.5s ease-in-out;
 }
 
 .box:hover {
-    background-color: rgb(167, 32, 59);
-    color: rgba(255, 84, 118, 0.437);
-
+    background: linear-gradient(145deg, rgba(167, 32, 32, 0.8), rgba(255, 84, 118, 0.6));
+    color: rgba(255, 84, 118, 0.7);
+    transform: scale(1.05);
 }
 
 #notification {
-    background-color: rgba(255, 84, 118, 0.8);
-    color: white; /* White text for visibility */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    color: white;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    transition: all 1s ease; /* For smooth appearance */
     font-weight: bold;
-    position: relative; /* Ensure it stays at the top */
-    margin-top: 20px; /* Space below the notification */
+    position: relative;
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
