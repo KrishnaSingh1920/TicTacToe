@@ -1,0 +1,48 @@
+body {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(244, 49, 88);
+    color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.gamebox {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+    gap: 10px;
+}
+
+.box {
+    display: grid;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 10px;
+    border-radius: 7.5px;
+    font-size: 10vw;
+    font-family: sans-serif;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.box:hover {
+    background-color: rgb(167, 32, 59);
+    color: rgba(255, 84, 118, 0.437);
+    font-size: 11vw;
+}
+
+#notification {
+    background-color: rgba(255, 84, 118, 0.8);
+    color: white; /* White text for visibility */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 1s ease; /* For smooth appearance */
+    font-weight: bold;
+    position: relative; /* Ensure it stays at the top */
+    margin-top: 20px; /* Space below the notification */
+}
