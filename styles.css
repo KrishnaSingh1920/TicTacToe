@@ -1,9 +1,12 @@
 body {
+    display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: rgb(244, 49, 88);
     color: white;
+    text-align: center;
 }
 
 .center {
