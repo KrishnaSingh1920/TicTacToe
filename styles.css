@@ -4,7 +4,7 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(244, 49, 88);
+    background-color: rgb(255, 79, 114);
     color: white;
     text-align: center;
 }
@@ -16,8 +16,8 @@ body {
 
 .gamebox {
     display: grid;
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
     gap: 10px;
 }
 
@@ -27,7 +27,7 @@ body {
     background-color: rgba(255, 255, 255, 0.21);
     padding: 10px;
     border-radius: 7.5px;
-    font-size: 10vw;
+    font-size: 20vw;
     font-family: sans-serif;
     transition: background-color 0.5s ease-in-out;
 }
@@ -35,7 +35,7 @@ body {
 .box:hover {
     background-color: rgb(167, 32, 59);
     color: rgba(255, 84, 118, 0.437);
-    font-size: 11vw;
+
 }
 
 #notification {
