@@ -5,14 +5,34 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding-top: 75px;
-    background: linear-gradient(135deg, #ff6161, #ff9999);
+    background: linear-gradient(135deg,  
+        #ff4d4d, 
+        #ffb3b3,
+        #ff6666, 
+        #ffd6d6, 
+        #ff8080,  
+        #ff9999
+         /* Lightest Cherry Pink */  
+    ); 
+    background-size: 400% 400%;
+    animation: gradient 10s infinite linear;
     color: white;
     text-align: center;
     user-select: none;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 64px;
+    background: linear-gradient(135deg,  
+        #ffe5e5,  
+        #ffecec  
+    );  
+    background-clip: border-box;
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+    text-shadow: 2px 2px 5px rgba(255, 77, 77, 0.3),  
+    4px 4px 8px rgba(255, 102, 102, 0.25),  
+    6px 6px 8px rgba(255, 153, 153, 0.2);  
 }
 
 .center {
@@ -22,8 +42,8 @@ h1 {
 
 .gamebox {
     display: grid;
-    grid-template-columns: repeat(3, 30vw);
-    grid-template-rows: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 7.5rem);
+    grid-template-rows: repeat(3, 7.5rem);
     gap: 10px;
 }
 
@@ -33,7 +53,7 @@ h1 {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
     padding: 10px;
     border-radius: 5px;
-    font-size: 20vw;
+    font-size: 5rem;
     font-family: sans-serif;
     transition: transform 0.3s ease, background 0.5s ease-in-out;
 }
@@ -66,4 +86,22 @@ h1 {
     to {
         opacity: 1;
     }
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.text
+{
+    background: linear-gradient(135deg,  
+        #ffe5e5,  
+        #ffecec  
+    );  
+    background-clip: border-box;
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+    text-shadow: 2px 2px 5px rgba(255, 77, 77, 0.3),  
+    4px 4px 8px rgba(255, 102, 102, 0.25),  
+    6px 6px 8px rgba(255, 153, 153, 0.2);  
 }
